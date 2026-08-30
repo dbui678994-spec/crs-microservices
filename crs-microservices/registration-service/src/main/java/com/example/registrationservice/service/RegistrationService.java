@@ -108,6 +108,10 @@ public class RegistrationService {
         );
     }
 
+    public List<Registration> getMyRegistrations(Long studentId) {
+        return registrationRepository.findByStudentId(studentId);
+    }
+
     private RegistrationDTO toDTO(
             Registration registration
     ) {
